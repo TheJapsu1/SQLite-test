@@ -17,3 +17,8 @@ D:\Visual Studio Projects\sqlite testi\obj\Debug\sqlite testi.csproj.CoreCompile
 D:\Visual Studio Projects\sqlite testi\obj\Debug\sqlite testi.csproj.CopyComplete
 D:\Visual Studio Projects\sqlite testi\obj\Debug\sqlite testi.exe
 D:\Visual Studio Projects\sqlite testi\obj\Debug\sqlite testi.pdb
+D:\Visual Studio Projects\sqlite testi\bin\Debug\sqlite testi.exe.manifest
+D:\Visual Studio Projects\sqlite testi\bin\Debug\sqlite testi.application
+D:\Visual Studio Projects\sqlite testi\obj\Debug\sqlite testi.exe.manifest
+D:\Visual Studio Projects\sqlite testi\obj\Debug\sqlite testi.application
+D:\Visual Studio Projects\sqlite testi\bin\Debug\SQLite.Interop.dll

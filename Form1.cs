@@ -71,7 +71,7 @@ namespace sqlite_testi
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                //MessageBox.Show(ex.ToString());
             }
         }
 
@@ -126,10 +126,8 @@ namespace sqlite_testi
                 MessageBox.Show(ex.ToString());
             }
         }
-        string targets;
         void ReadData(string target)
         {
-            targets = target;
             try
             {
                 SQLiteConnection conn = CreateConnection();
@@ -152,6 +150,7 @@ namespace sqlite_testi
                     ListViewItem item = new ListViewItem(sqlite_datareader.GetString(0));
                     item.SubItems.Add(sqlite_datareader.GetString(1));
                     item.SubItems.Add(sqlite_datareader.GetString(2));
+                    item.UseItemStyleForSubItems = false;
                     items.Add(item);
                 }
 
@@ -159,7 +158,22 @@ namespace sqlite_testi
                 contentsView.Columns[0].Width = 90;
                 contentsView.Columns[1].Width = 90;
                 contentsView.Columns[2].Width = 90;
-                debugLabel.Text = searchField.Text;
+                debugLabel.Text = "searching: " + searchField.Text;
+
+                for (int i = 0; i < contentsView.Items.Count; i++)
+                {
+                    for (int k = 0; k < contentsView.Items[i].SubItems.Count; k++)
+                    {
+                        if (contentsView.Items[i].SubItems[k].Text.Contains(target))
+                        {
+                            contentsView.Items[i].SubItems[k].BackColor = Color.Yellow;
+                        }
+                        else
+                        {
+                            contentsView.Items[i].SubItems[k].BackColor = Color.White;
+                        }
+                    }
+                }
 
                 conn.Close();
             }
